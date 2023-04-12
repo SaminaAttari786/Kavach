@@ -25,8 +25,7 @@
 
 
 ## Links
-* GitHub Repo link: [Link to repository](https://github.com/your-repo-link)
-* Live Project Link(optional): [Website link here](www.google.com)
+* GitHub Repo link:https://github.com/SaminaAttari786/Kavach
 
 ## Technology stack
 
