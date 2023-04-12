@@ -14,7 +14,7 @@ declare module 'express-session' {
 }
 
 const main = async () => {
-    const PORT= process.env.PORT || 3000;
+    const PORT= process.env.PORT || 5000;
 
 
     await connection.connectToServer(async function( err:any, client:any ) {
@@ -74,7 +74,7 @@ const main = async () => {
 
 
     app.listen(PORT, () => {
-        console.log("Server started on localhost:3000")
+        console.log("Server started on localhost:", PORT)
     });
 
 };
