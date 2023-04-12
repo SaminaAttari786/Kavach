@@ -17,6 +17,7 @@ import MarkerClusterGroup from "react-leaflet-cluster";
 const Leaflet = () => {
   const position = [19.07609, 72.877426];
 
+  // markers - represents users
   const markers = [
     {
       geocode: [19.07609, 72.877426],
@@ -42,6 +43,7 @@ const Leaflet = () => {
     },
   ];
 
+  //circle positions - represents regions
   const circle_markers = [
     {
       center: [25.24209, 75.877426],
@@ -61,36 +63,42 @@ const Leaflet = () => {
     },
   ];
 
+  // marker icon
   const customIcon = new Icon({
     iconUrl: "https://cdn-icons-png.flaticon.com/512/6153/6153497.png",
     iconSize: [38, 38],
   });
 
 
-  //distance calculation - 1
-  ///Can't get proper distance oof.
-  // console.log(circle_markers[0].center[0]);
-  // console.log(markers[0].geocode[0]);
-  // distance = (Math.abs(circle_markers[0].center[0] - markers[0].geocode[0])).toFixed(7);
- 
+// distance between two co-ordinates calculation
+const setDistance = (lat1,
+  lat2, lon1, lon2) =>
+{
 
-  //distance calculation - 2
+// The math module contains a function
+// named toRadians which converts from
+// degrees to radians.
+lon1 =  lon1 * Math.PI / 180;
+lon2 = lon2 * Math.PI / 180;
+lat1 = lat1 * Math.PI / 180;
+lat2 = lat2 * Math.PI / 180;
 
-  
+// Haversine formula
+let dlon = lon2 - lon1;
+let dlat = lat2 - lat1;
+let a = Math.pow(Math.sin(dlat / 2), 2)
++ Math.cos(lat1) * Math.cos(lat2)
+* Math.pow(Math.sin(dlon / 2),2);
 
-//   setDistance = (latA, latB) => {
-//     if (latA !== undefined && latB !== undefined) {
-        
-//         let dis = latA.distanceTo(latB);
-//         let distanceConversion = ((dis) / 1000).toFixed(0);
-//         let distanceKm = distanceConversion;
-//         distance = distanceKm;
-//         return distance || 0;
-//     }
-//     else {
-//         return 0;
-//     }
-// }
+let c = 2 * Math.asin(Math.sqrt(a));
+
+// Radius of earth in kilometers. Use 3956
+// for miles
+let r = 6371;
+
+// calculate the result
+return(c * r);
+}
 
 var distance = 0;
 
@@ -110,14 +118,15 @@ var distance = 0;
           ))}
         </MarkerClusterGroup>
 
-        {circle_markers.map((marker) => (
-          <CircleMarker center={marker.center} radius={100} />
+        {circle_markers.map((circle_marker) => (
+          <CircleMarker center={circle_marker.center} radius={100}>  <Popup>{circle_marker.popUp}</Popup></CircleMarker>
         ))}
-        {/* {distance = setDistance(circle_markers.center[0],markers.geocode[0])} */}
+
+        {distance = setDistance(circle_markers[0].center[0],markers[0].geocode[0],circle_markers[0].center[1],markers[0].geocode[1])}
       </MapContainer>
 
 
-      {/* <p>Distance is {distance}</p> */}
+      <p>Distance between circle1 and user1 is {distance}</p>
     </div>
   );
 };
