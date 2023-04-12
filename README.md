@@ -42,9 +42,6 @@ For User side :-
 
 3.Firebase
 
-## Project Setup
->Include your project setup basics here. Steps for how someone else can setup your project on their machine. Add any relevant details as well.
-
 ## Usage
 
 #### ADMIN USAGE :-
