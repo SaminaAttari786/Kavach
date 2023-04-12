@@ -1,16 +1,17 @@
 # Kavach
 
-# Project Name
+# Project Name :- Tool for monitoring ground personnel
 
-### Team name: your-team-name
+
+### Team name: Dev Devils
 
 ## Team members
-* Member-1 Name - Email
-* Member-2 Name - Email
-* Member-3 Name - Email
-* Member-4 Name - Email
-* Member-5 Name - Email
-* Member-6 Name - Email
+* Vriddhi Gupta Name - Email
+* Samina Attari Name - Email
+* Meera Wadher Name - Email
+* Vedika Mamidwar Name - Email
+* Abhay Ubhale Name - Email
+* Neel Dandiwala - Email
 
 
 ## Description
