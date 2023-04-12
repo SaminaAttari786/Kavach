@@ -25,7 +25,7 @@ const main = async () => {
     
     const MongoDBStore = connectMongoDBSession(session);
     const sessionStore = new MongoDBStore({
-        uri: process.env.DATABASE_URL || 'mongodb+srv://kavach:kavach@cluster0.bbsjscs.mongodb.net/?retryWrites=true&w=majority',
+        uri: process.env.DATABASE_URL || 'mongodb+srv://kavach:kavach@cluster0.bbsjscs.mongodb.net/kavach-database?retryWrites=true&w=majority',
         collection: 'session'
     });
 
@@ -53,7 +53,7 @@ const main = async () => {
                 httpOnly: true,
                 sameSite: 'lax',
                 // secure: false,
-                domain: "http://localhost:3000/",
+                // domain: "http://localhost:3000/",
             },
             store: sessionStore,
             unset: 'destroy',
@@ -63,7 +63,7 @@ const main = async () => {
     ));
 
     app.use(express.json());
-    app.use(require('./routes/StudentRoutes'));
+    app.use(require('./routes/PoliceRoutes'));
     app.use(require('./routes/QRRoutes'));
     app.use(require('./routes/AdminRoutes'));
     app.use(fileUpload());

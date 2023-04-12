@@ -15,8 +15,8 @@ class Authentication {
 
 export type serverContext = {
     req: Request & {
-        session?: Session & {
-            authenticationID? : string ;
+        session: Session & {
+            authenticationID : string ;
         }
     }
     res: Response 

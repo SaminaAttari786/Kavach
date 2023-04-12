@@ -1,79 +1,77 @@
 "use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const Student_1 = __importDefault(require("../models/Student"));
 const argon2_1 = __importDefault(require("argon2"));
 const connection_1 = require("../connection");
 const mongodb_1 = require("mongodb");
-const nodemailer = __importStar(require("nodemailer"));
 require('dotenv').config();
-const studentSignUp = async (req, res) => {
-    console.log(req);
+const policeRegister = async (req, res) => {
     const db = await connection_1.connection.getDb();
-    let collection;
+    const collection = db.collection('police');
     try {
-        let logs;
-        const studentId = req.body.studentId;
-        console.log(studentId);
-        collection = db.collection('it_cs_students');
-        let studentExist = await collection.findOne({ _id: studentId });
-        if (studentExist === null) {
-            logs = [
-                {
-                    field: "Non-existing Student Error",
-                    message: "Student does not exist",
-                }
-            ];
+        const policeData = req.body;
+        console.log(agentData);
+        let credentials = new CredentialsInput();
+        credentials.email = agentData.agentEmail;
+        credentials.username = agentData.agentName;
+        credentials.password = agentData.agentPassword;
+        let logs = validation(credentials);
+        if (logs) {
             res.status(400).json({ logs });
             return { logs };
         }
-        collection = db.collection('student');
-        let alreadyExisting = await collection.findOne({ _id: studentId });
-        if (alreadyExisting !== null) {
-            logs = [
-                {
-                    field: "Student SignUp Error",
-                    message: "Student already signed up before",
-                }
-            ];
-            res.status(400).json({ logs });
-            return { logs };
-        }
-        let randomPassword = Math.random().toString(36).substring(2, 8);
-        const _student = new Student_1.default({
-            _id: studentId,
-            studentCollegeId: studentId,
-            studentPassword: randomPassword,
-            studentBalance: -1
+        const hashedPassword = await argon2_1.default.hash(credentials.password);
+        const _agent = new Agent({
+            agentName: agentData.agentName,
+            agentEmail: agentData.agentEmail,
+            agentPassword: hashedPassword,
+            agentAge: agentData.agentAge,
+            agentMobile: agentData.agentMobile,
+            agentCity: agentData.agentCity,
+            agentState: agentData.agentState,
+            agentPincode: agentData.agentPincode,
+            agentAddress: agentData.agentAddress,
+            agentLatitude: '',
+            agentLongitude: ''
         });
+        let geoLocationResponse;
+        var API_KEY = process.env.LOCATIONIQ_API_KEY;
+        var BASE_URL = "https://us1.locationiq.com/v1/search?format=json&limit=1";
+        let address = _agent.agentAddress + ' ' + _agent.agentPincode;
+        var url = BASE_URL + "&key=" + API_KEY + "&q=" + address;
+        let config = {
+            method: 'get',
+            url: url,
+            headers: {}
+        };
+        await axios(config).then(function (response) {
+            console.log(response.data[0]);
+            geoLocationResponse = response.data[0];
+        }).catch(function (error) {
+            console.log(error);
+            geoLocationResponse = null;
+        });
+        if (geoLocationResponse === null) {
+            logs = [
+                {
+                    field: "LocationIQ Error",
+                    message: "Better check with administrator",
+                }
+            ];
+            res.status(400).json({ logs });
+            return;
+        }
+        else {
+            console.log(geoLocationResponse);
+            console.log(typeof geoLocationResponse);
+            _agent.agentLatitude = geoLocationResponse.lat * 1;
+            _agent.agentLongitude = geoLocationResponse.lon * 1;
+        }
         let result;
         try {
-            result = await collection.insertOne(_student);
+            result = await collection.insertOne(_agent);
         }
         catch (err) {
             if (err instanceof mongodb_1.MongoServerError && err.code === 11000) {
@@ -93,37 +91,20 @@ const studentSignUp = async (req, res) => {
         console.log(result);
         if (result.acknowledged) {
             console.log(result);
-            var transporter = nodemailer.createTransport({
-                host: 'smtp.gmail.com',
-                port: 465,
-                secure: true,
-                auth: {
-                    user: 'vgcoins321@gmail.com',
-                    pass: 'rtbdibujphwjsslf',
-                },
-            });
-            var mailOptions = {
-                from: "vgcoins321@gmail.com",
-                to: studentExist.studentMailId,
-                subject: "Hello from VGC",
-                text: "Your password is " + randomPassword,
-                headers: { 'x-myheader': 'test header' }
-            };
-            await transporter.sendMail(mailOptions, function (error, info) {
-                if (error) {
-                    console.log(error);
-                    logs = [
-                        {
-                            field: "NodeMailer Error",
-                            message: error,
-                        }
-                    ];
-                    res.status(400).json({ logs });
-                    return { logs };
-                }
-                else {
-                    console.log('Email sent: ' + info.response);
-                }
+            let validationContract = new (web3.getWeb3()).eth.Contract(ValidationABI.abi, process.env.VALIDATION_ADDRESS, {});
+            validationContract.methods.addAgent(result.insertedId.toString()).send({ from: process.env.OWNER_ADDRESS, gasPrice: '3000000' })
+                .then(function (blockchain_result) {
+                console.log(blockchain_result);
+            }).catch((err) => {
+                console.log(err);
+                logs = [
+                    {
+                        field: "Blockchain Error",
+                        message: err,
+                    }
+                ];
+                res.status(400).json({ logs });
+                return { logs };
             });
             logs = [
                 {

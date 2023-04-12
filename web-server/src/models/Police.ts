@@ -1,27 +1,27 @@
-import { StudentInfo } from "../types/StudentInfo";
+import { PoliceInfo } from "../types/PoliceInfo";
 import { model, Schema } from "mongoose";
 
-const StudentSchema: Schema = new Schema({
+const PoliceSchema: Schema = new Schema({
     _id: {
         type: String,
         required: false
     },
 
-    studentCollegeId: {
+    policeName: {
         type: String,
         required: true
     },
 
-    studentPassword:  {
+    policeNumber:  {
         type: String,
         required: true
     },
 
-    studentBalance:  {
-        type: Number,
+    policePassword:  {
+        type: String,
         required: true
     },
 
 }, {timestamps: true})
 
-export default model<StudentInfo>("Student", StudentSchema);
+export default model<PoliceInfo>("Police", PoliceSchema);

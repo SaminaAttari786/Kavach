@@ -20,7 +20,7 @@ const main = async () => {
     });
     const MongoDBStore = (0, connect_mongodb_session_1.default)(express_session_1.default);
     const sessionStore = new MongoDBStore({
-        uri: process.env.DATABASE_URL || 'mongodb+srv://kavach:kavach@cluster0.bbsjscs.mongodb.net/?retryWrites=true&w=majority',
+        uri: process.env.DATABASE_URL || 'mongodb+srv://kavach:kavach@cluster0.bbsjscs.mongodb.net/kavach-database?retryWrites=true&w=majority',
         collection: 'session'
     });
     sessionStore.on('error', function (error) {
@@ -40,7 +40,6 @@ const main = async () => {
             maxAge: 1000 * 60 * 60 * 24 * 7,
             httpOnly: true,
             sameSite: 'lax',
-            domain: "http://localhost:3000/",
         },
         store: sessionStore,
         unset: 'destroy',
@@ -48,7 +47,7 @@ const main = async () => {
         resave: false,
     }));
     app.use(express_1.default.json());
-    app.use(require('./routes/StudentRoutes'));
+    app.use(require('./routes/PoliceRoutes'));
     app.use(require('./routes/QRRoutes'));
     app.use(require('./routes/AdminRoutes'));
     app.use(fileUpload());

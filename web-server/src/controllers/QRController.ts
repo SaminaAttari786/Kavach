@@ -1,7 +1,7 @@
 import QRCode from "qrcode"
 import { Request, Response } from 'express';
-import { StudentInfo } from '../types/StudentInfo';
-import Student from '../models/Student';
+import { StudentInfo } from '../types/PoliceInfo';
+import Student from '../models/Police';
 import { ResponseFormat } from "../resolvers/Format";
 import argon2 from "argon2";
 import {connection} from "../connection";
