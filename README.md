@@ -6,12 +6,12 @@
 ### Team name: Dev Devils
 
 ## Team members
-* Vriddhi Gupta Name - Email
-* Samina Attari Name - Email
-* Meera Wadher Name - Email
-* Vedika Mamidwar Name - Email
-* Abhay Ubhale Name - Email
-* Neel Dandiwala - Email
+* Vriddhi Gupta - vriddhigupta898@gmail.com
+* Samina Attari - sameenaattari7860@gmail.com
+* Meera Wadher - wadher.meera@gmail.com 
+* Vedika Mamidwar  - vedikakmamidwar@gmail.com
+* Abhay Ubhale  - abhayubhale.30@gmail.com
+* Neel Dandiwala - neeldandi@gmail.com
 
 
 ## Description
