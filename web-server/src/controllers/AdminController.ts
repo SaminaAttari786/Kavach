@@ -1,6 +1,4 @@
 import { Request, Response } from 'express';
-import { EventInfo } from '../types/EventInfo';
-import { AdvertisementInfo } from '../types/AdvertisementInfo';
 // import { ResponseFormat } from "../resolvers/Format";
 // import argon2 from "argon2";
 import { connection } from "../connection";
@@ -8,13 +6,11 @@ import { MongoServerError } from 'mongodb'
 import { uploadOnImgur } from '../imgur';
 import { formatDate, addWeeksToDate } from '../utils/DateFormat'
 import mongoose from "mongoose";
-import { TransactionInfo } from '../types/TransactionInfo';
-import Transaction from '../models/Transaction';
 require('dotenv').config()
 
 
 const uploadImageTrial = async (req: Request, res: Response) => {
-    // console.log(req.file, req.body)
+    console.log(req.file, req.body)
     let logs = {
         field: "Image Uploaded",
         message: req.file
