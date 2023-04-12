@@ -2,6 +2,8 @@ import './App.css';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from './components/Home/home'
 import Leaflet from './components/Leaflet/leaflet';
+import Login from './components/AdminLogin/login';
+import 'leaflet/dist/leaflet.css';
 
 
 const App=()=> {
