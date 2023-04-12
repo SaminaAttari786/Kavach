@@ -15,9 +15,13 @@
 
 
 ## Description
-Add your project description here.
 
-* Use bullet points for any feature descriptions you may want to add
+1. Our personal asset tracking system consists of  a generalized monitoring system from the admin panel who has access to all features and can view all police officers who are assigned duty on a map . It involves dynamic tracking of the police officers .
+2. The admin panel has feature to register a police officer and view and delete as well and option to assign a new location or post or alert the police officer who is nearest to another officer whose gps tracker or app is not trackable or fails to perform his duty. 
+3. The user or the police officer signs up in the app using their details which are verified from the admin end who in turn then authenticates the police officers identity and allows him access in the application portal.
+4. The admin can view and delete police officers as well and can assign nearby police officers incase of emergency situation to officers who are in need of it.
+5. The user or the police officer who has access in the application also as the feature to  notify or send an alert to the admin for incase of emergency situation during bandobast events in rallies or elections etc
+6. The admin also has the feature to assign the police officers shift wise duties so that the officers can get adequate breaks and monitoring and patrolling is done at all times as police force needs to be very vigilant to avoid the danger caused due to miscreants.
 
 
 ## Links
