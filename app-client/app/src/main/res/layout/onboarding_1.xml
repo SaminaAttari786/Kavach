@@ -25,7 +25,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        android:src="@drawable/bg5" />
+        android:src="@drawable/bg8" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -100,7 +100,7 @@
         android:layout_marginTop="45dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/montserrat_semibold"
-        android:text="@string/demo_title"
+        android:text="One Stop Solution"
         android:textColor="#FFFFFF"
         android:textSize="32sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
@@ -116,7 +116,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/sarabun_regular"
-        android:text="@string/demo_content"
+        android:text="Every day police officers leave the station in order to protect us from any dangerous elements in our community. They put themselves in dangerous situations that could end with them being hurt. Hence, it is important to keep every officer deployed in track and in contact."
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
