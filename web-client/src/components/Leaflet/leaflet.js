@@ -104,7 +104,8 @@ var distance = 0;
 
   return (
     <div className="map_outer_div">
-      <MapContainer center={position} zoom={7} scrollWheelZoom={false}>
+      <MapContainer center={position} zoom={7} scrollWheelZoom={false} touchZoom={false} doubleClickZoom={false}
+  closePopupOnClick={false} dragging={false} zoomSnap={false} zoomDelta={false} trackResize={false}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -119,7 +120,7 @@ var distance = 0;
         </MarkerClusterGroup>
 
         {circle_markers.map((circle_marker) => (
-          <CircleMarker center={circle_marker.center} radius={100}>  <Popup>{circle_marker.popUp}</Popup></CircleMarker>
+          <CircleMarker center={circle_marker.center} radius={50}>  <Popup>{circle_marker.popUp}</Popup></CircleMarker>
         ))}
 
         {distance = setDistance(circle_markers[0].center[0],markers[0].geocode[0],circle_markers[0].center[1],markers[0].geocode[1])}
