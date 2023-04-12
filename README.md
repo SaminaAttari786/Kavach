@@ -35,8 +35,11 @@ For Admin side :-
 1. React Js
 
 For User side :-
+
 1.Android studio
+
 2.Java
+
 3.Firebase
 
 ## Project Setup
@@ -44,20 +47,24 @@ For User side :-
 
 ## Usage
 
-###ADMIN USAGE :-
+#### ADMIN USAGE :-
 1. The admin or the main police incharge or head can monitor the constables or police officers assigned during bandobast as this would allow him to have a complete view of the full area and he would be able to monitor the police constables as well as assign or replace officers when there gps fails or in times of emergency.
 2. Incase of emergency admin can notify nearby police officers within a minimum radius so that all areas are patrolled and strict discipline is maintained to avoid crimes.
 3. The admin will also be able to delete ,view , authenticate the identity of officers so that sensitive information does not go in wrong hands.
 4. The admin will assign shifts to the officers so that they get proper breaks in between too and monitoring is done at all times.
 
-###POLICE OFFICER USAGE :-
+#### POLICE OFFICER USAGE :-
 
 1. The police officer will register to the app whose details will then be verified by the admin panel so that appropriate authentication is done to verify the identity of the officer.
 2. The police officer will be able to send an emergency alert to the admin incase of any emergency or crime which needs more force.
 3. The officer will also be able to see the shift or duty assigned to him by the admin panel,
 
 ## Applications
->How can your project do its part in solving a real-life problem? What are its possible applications? Describe here.
+1. Our project will play a great role during the monitoring of police officials who are assigned respective shifts during major functions like elections, national holidays etc. 
+2. Through our project the main head of the police force will play a vital role in monitoring the police force and will be able to send more force in times of emergency .
+3. The admin will be able to provide an efficient tracking system of the police officers.
+4. The user or the police officer will also be able to notify the admin via the android app.
+5. The admin can also assign shifts to the police officers who in turn can see this via the shift status through their android app.
 
 ## Future scope
 
