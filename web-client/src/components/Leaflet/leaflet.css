@@ -1,0 +1,14 @@
+.markercluster-map{
+    height: 70vh;
+}
+
+.map_outer_div{
+    padding: 5em;
+    margin:5em;
+    border: solid red 1px;
+}
+
+
+.leaflet-container{
+    height: 100vh;
+}
