@@ -31,22 +31,41 @@
 
 Tools and technologies that you learnt and used in the project.
 
-1. Language-1
-2. Language-2
-3. Framework-1
-4. Framework-2 (Add or remove as required)
+For Admin side :-
+1. React Js
+
+For User side :-
+1.Android studio
+2.Java
+3.Firebase
 
 ## Project Setup
 >Include your project setup basics here. Steps for how someone else can setup your project on their machine. Add any relevant details as well.
 
 ## Usage
->Steps to run your project once its setup. If you have an app or website, list how the user can go about using it.
+
+###ADMIN USAGE :-
+1. The admin or the main police incharge or head can monitor the constables or police officers assigned during bandobast as this would allow him to have a complete view of the full area and he would be able to monitor the police constables as well as assign or replace officers when there gps fails or in times of emergency.
+2. Incase of emergency admin can notify nearby police officers within a minimum radius so that all areas are patrolled and strict discipline is maintained to avoid crimes.
+3. The admin will also be able to delete ,view , authenticate the identity of officers so that sensitive information does not go in wrong hands.
+4. The admin will assign shifts to the officers so that they get proper breaks in between too and monitoring is done at all times.
+
+###POLICE OFFICER USAGE :-
+
+1. The police officer will register to the app whose details will then be verified by the admin panel so that appropriate authentication is done to verify the identity of the officer.
+2. The police officer will be able to send an emergency alert to the admin incase of any emergency or crime which needs more force.
+3. The officer will also be able to see the shift or duty assigned to him by the admin panel,
 
 ## Applications
 >How can your project do its part in solving a real-life problem? What are its possible applications? Describe here.
 
 ## Future scope
->Mention ways in which the project can be improved and built upon in the future.
+
+1. Currently police is only notifying the admin about the emergency in future this can be broken down into types of emergency like fire ,hospitals , 
+police stations etc so that the officer can get the nearest hospitals or police stations or fire stations in case of serious or emergency situations.
+
+2. In the android app side the police officer can also seek aid from fellow officer based on the nearby distance.
+
 
 ## Screenshots
 Add a few screenshots for parts of the project completed till now to give the viewer a quick idea of what your project looks like. After all, a picture speaks a thousand words.
