@@ -1,4 +1,6 @@
 import React from 'react'
+import { AddShiftData } from './views/addShiftData'
+import { AddPoliceData } from './views/addPoliceData'
 
 const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'))
 const Colors = React.lazy(() => import('./views/theme/colors/Colors'))
@@ -95,6 +97,8 @@ const routes = [
   { path: '/notifications/modals', name: 'Modals', element: Modals },
   { path: '/notifications/toasts', name: 'Toasts', element: Toasts },
   { path: '/leaflet', name: 'Leaflet', element: Leaflet },
+  { path: '/add-police-data', name: 'Add Police Data', element: AddPoliceData },
+  { path: '/assign-shift', name: 'Add Shift Data', element: AddShiftData },
 ]
 
 export default routes

@@ -20,46 +20,28 @@ const Leaflet = () => {
   // markers - represents users
   const markers = [
     {
-      geocode: [19.07609, 72.877426],
-      lat:19.07609,
-      long:72.877426,
-      popUp: "Hi, This is User1",
+      geocode: [19.0839385, 72.90321],
+      // lat: 19.07609,
+      // long: 72.877426,
+      popUp: "Vriddhi's location",
     },
     {
-      geocode: [18.516726, 73.856255],
-      lat:18.516726,
-      long:73.856255,
-      popUp: "Hi, This is User2",
-    },
-    {
-      geocode: [21.1458, 79.0082],
-      lat:21.1458,
-      long:79.0082,
-      popUp: "Hi, This is User3",
-    },
-    {
-      geocode: [19.9975, 73.7898],
-      popUp: "Hi, This is User4",
+      geocode: [19.0823626, 72.8960185],
+      // lat: 18.516726,
+      // long: 73.856255,
+      popUp: "Sumit's location",
     },
   ];
 
   //circle positions - represents regions
   const circle_markers = [
     {
-      center: [25.24209, 75.877426],
-      popUp: "Hi, This is Circle1",
+      center: [19.0839385, 72.90321],
+      popUp: "Vriddhi's perimeter",
     },
     {
-      center: [19.21226, 74.856255],
-      popUp: "Hi, This is Circle2",
-    },
-    {
-      center: [20.98978, 76.0082],
-      popUp: "Hi, This is Circle3",
-    },
-    {
-      center: [21.89775, 70.7898],
-      popUp: "Hi, This is Circle4",
+      center: [19.0823626, 72.8960185],
+      popUp: "Sumit's perimeter",
     },
   ];
 
@@ -70,42 +52,41 @@ const Leaflet = () => {
   });
 
 
-// distance between two co-ordinates calculation
-const setDistance = (lat1,
-  lat2, lon1, lon2) =>
-{
+  // distance between two co-ordinates calculation
+  const setDistance = (lat1,
+    lat2, lon1, lon2) => {
 
-// The math module contains a function
-// named toRadians which converts from
-// degrees to radians.
-lon1 =  lon1 * Math.PI / 180;
-lon2 = lon2 * Math.PI / 180;
-lat1 = lat1 * Math.PI / 180;
-lat2 = lat2 * Math.PI / 180;
+    // The math module contains a function
+    // named toRadians which converts from
+    // degrees to radians.
+    lon1 = lon1 * Math.PI / 180;
+    lon2 = lon2 * Math.PI / 180;
+    lat1 = lat1 * Math.PI / 180;
+    lat2 = lat2 * Math.PI / 180;
 
-// Haversine formula
-let dlon = lon2 - lon1;
-let dlat = lat2 - lat1;
-let a = Math.pow(Math.sin(dlat / 2), 2)
-+ Math.cos(lat1) * Math.cos(lat2)
-* Math.pow(Math.sin(dlon / 2),2);
+    // Haversine formula
+    let dlon = lon2 - lon1;
+    let dlat = lat2 - lat1;
+    let a = Math.pow(Math.sin(dlat / 2), 2)
+      + Math.cos(lat1) * Math.cos(lat2)
+      * Math.pow(Math.sin(dlon / 2), 2);
 
-let c = 2 * Math.asin(Math.sqrt(a));
+    let c = 2 * Math.asin(Math.sqrt(a));
 
-// Radius of earth in kilometers. Use 3956
-// for miles
-let r = 6371;
+    // Radius of earth in kilometers. Use 3956
+    // for miles
+    let r = 6371;
 
-// calculate the result
-return(c * r);
-}
+    // calculate the result
+    return (c * r);
+  }
 
-var distance = 0;
+  var distance = 0;
 
   return (
     <div className="map_outer_div">
       <MapContainer center={position} zoom={7} scrollWheelZoom={false} touchZoom={false} doubleClickZoom={false}
-  closePopupOnClick={false} dragging={false} zoomSnap={false} zoomDelta={false} trackResize={false}>
+        closePopupOnClick={false} dragging={false} zoomSnap={false} zoomDelta={false} trackResize={false}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -123,11 +104,11 @@ var distance = 0;
           <CircleMarker center={circle_marker.center} radius={50}>  <Popup>{circle_marker.popUp}</Popup></CircleMarker>
         ))}
 
-        {distance = setDistance(circle_markers[0].center[0],markers[0].geocode[0],circle_markers[0].center[1],markers[0].geocode[1])}
+        {/* {distance = setDistance(circle_markers[0].center[0], markers[0].geocode[0], circle_markers[0].center[1], markers[0].geocode[1])} */}
       </MapContainer>
 
 
-      <p>Distance between circle1 and user1 is {distance}</p>
+      {/* <p>Distance between circle1 and user1 is {distance}</p> */}
     </div>
   );
 };

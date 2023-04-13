@@ -11,7 +11,7 @@ import * as nodemailer from 'nodemailer'
 require('dotenv').config()
 
 
-const policeRegister = async(req: Request, res: Response) => {
+const policeRegister = async(req: Request, res: Response) => {  
 
     const db = await connection.getDb();
     let logs;
