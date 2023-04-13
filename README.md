@@ -73,10 +73,10 @@ police stations etc so that the officer can get the nearest hospitals or police 
 
 ## Screenshots
 ## Screenshots
-| ![](https://github.com/Vriddhigupta/Croplyzer/blob/main/Onboarding1.jpeg) | ![](https://github.com/Vriddhigupta/Croplyzer/blob/main/Onboarding2.jpeg) | ![](https://github.com/Vriddhigupta/Croplyzer/blob/main/Onboarding3.jpeg) | ![](https://github.com/Vriddhigupta/Croplyzer/blob/main/HomePage.jpeg) |
+| ![](https://github.com/SaminaAttari786/Kavach/blob/master/onboard1.jpeg) | ![](https://github.com/SaminaAttari786/Kavach/blob/master/onboard2.jpeg) | ![](https://github.com/SaminaAttari786/Kavach/blob/master/onboard3.jpeg) | ![](https://github.com/SaminaAttari786/Kavach/blob/master/login.jpeg) |
 | :-------------: | :-------------:  | :-------------:  | :-------------:  |
-|     Onboarding Screen1     |    Onboarding Screen2   |    Onboarding Screen3     |      HomePage     |
+|     Onboarding Screen1     |    Onboarding Screen2   |    Onboarding Screen3     |      Login Page    |
 
-| ![](https://github.com/Vriddhigupta/Croplyzer/blob/main/Home_with_image.jpeg) | ![](https://github.com/Vriddhigupta/Croplyzer/blob/main/prediction.jpeg) |
-| :-------------: | :-------------:  | 
-|     Home Page with Image     |    Maturity Prediction   |   
+| ![](https://github.com/SaminaAttari786/Kavach/blob/master/register.jpeg) | ![](https://github.com/SaminaAttari786/Kavach/blob/master/home_page.jpeg) | ![](https://github.com/SaminaAttari786/Kavach/blob/master/emergency.jpeg) | ![](https://github.com/SaminaAttari786/Kavach/blob/master/profile.jpeg) | ![](https://github.com/SaminaAttari786/Kavach/blob/master/notification.jpeg) | 
+| :-------------: | :-------------:  |  :-------------: | :-------------:  | 
+|     Register Page     |     Home Page   |   Replacement Page     |     Profile Page   |    Alert Notification   |   
