@@ -78,5 +78,5 @@ police stations etc so that the officer can get the nearest hospitals or police 
 |     Onboarding Screen1     |    Onboarding Screen2   |    Onboarding Screen3     |      Login Page    |
 
 | ![](https://github.com/SaminaAttari786/Kavach/blob/master/register.jpeg) | ![](https://github.com/SaminaAttari786/Kavach/blob/master/home_page.jpeg) | ![](https://github.com/SaminaAttari786/Kavach/blob/master/emergency.jpeg) | ![](https://github.com/SaminaAttari786/Kavach/blob/master/profile.jpeg) | ![](https://github.com/SaminaAttari786/Kavach/blob/master/notification.jpeg) | 
-| :-------------: | :-------------:  |  :-------------: | :-------------:  | 
+| :-------------: | :-------------:  |  :-------------: | :-------------:  | :-------------:  | 
 |     Register Page     |     Home Page   |   Replacement Page     |     Profile Page   |    Alert Notification   |   
