@@ -26,6 +26,8 @@
 
 ## Links
 * GitHub Repo link:https://github.com/SaminaAttari786/Kavach
+* Video Demo link:https://youtu.be/Eyjmg80PjIM
+* PPT link:https://docs.google.com/presentation/d/1ye3S16lSqnyZ4cVqiQH2WPGfipjpkezs/edit#slide=id.p2
 
 ## Technology stack
 
@@ -33,6 +35,10 @@ Tools and technologies that you learnt and used in the project.
 
 For Admin side :-
 1. React Js
+2. MongoDB
+3. Node.JS
+4. Express.JS
+5. TypeScript
 
 For User side :-
 
@@ -72,6 +78,11 @@ police stations etc so that the officer can get the nearest hospitals or police 
 
 
 ## Screenshots
-Add a few screenshots for parts of the project completed till now to give the viewer a quick idea of what your project looks like. After all, a picture speaks a thousand words.
+## Screenshots
+| ![](https://github.com/SaminaAttari786/Kavach/blob/master/onboard1.jpeg) | ![](https://github.com/SaminaAttari786/Kavach/blob/master/onboard2.jpeg) | ![](https://github.com/SaminaAttari786/Kavach/blob/master/onboard3.jpeg) | ![](https://github.com/SaminaAttari786/Kavach/blob/master/login.jpeg) |
+| :-------------: | :-------------:  | :-------------:  | :-------------:  |
+|     Onboarding Screen1     |    Onboarding Screen2   |    Onboarding Screen3     |      Login Page    |
 
-![Screenshot alt text](https://img.freepik.com/free-photo/blue-purple-technology-circuit_73426-205.jpg "Here is a screenshot")
+| ![](https://github.com/SaminaAttari786/Kavach/blob/master/register.jpeg) | ![](https://github.com/SaminaAttari786/Kavach/blob/master/home_page.jpeg) | ![](https://github.com/SaminaAttari786/Kavach/blob/master/emergency.jpeg) | ![](https://github.com/SaminaAttari786/Kavach/blob/master/profile.jpeg) | ![](https://github.com/SaminaAttari786/Kavach/blob/master/notification.jpeg) | 
+| :-------------: | :-------------:  |  :-------------: | :-------------:  | :-------------:  | 
+|     Register Page     |     Home Page   |   Replacement Page     |     Profile Page   |    Alert Notification   |   
