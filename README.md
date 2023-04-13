@@ -26,6 +26,8 @@
 
 ## Links
 * GitHub Repo link:https://github.com/SaminaAttari786/Kavach
+* Video Demo link:https://youtu.be/Eyjmg80PjIM
+* PPT link:https://docs.google.com/presentation/d/1ye3S16lSqnyZ4cVqiQH2WPGfipjpkezs/edit#slide=id.p2
 
 ## Technology stack
 
