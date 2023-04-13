@@ -72,6 +72,11 @@ police stations etc so that the officer can get the nearest hospitals or police 
 
 
 ## Screenshots
-Add a few screenshots for parts of the project completed till now to give the viewer a quick idea of what your project looks like. After all, a picture speaks a thousand words.
+## Screenshots
+| ![](https://github.com/Vriddhigupta/Croplyzer/blob/main/Onboarding1.jpeg) | ![](https://github.com/Vriddhigupta/Croplyzer/blob/main/Onboarding2.jpeg) | ![](https://github.com/Vriddhigupta/Croplyzer/blob/main/Onboarding3.jpeg) | ![](https://github.com/Vriddhigupta/Croplyzer/blob/main/HomePage.jpeg) |
+| :-------------: | :-------------:  | :-------------:  | :-------------:  |
+|     Onboarding Screen1     |    Onboarding Screen2   |    Onboarding Screen3     |      HomePage     |
 
-![Screenshot alt text](https://img.freepik.com/free-photo/blue-purple-technology-circuit_73426-205.jpg "Here is a screenshot")
+| ![](https://github.com/Vriddhigupta/Croplyzer/blob/main/Home_with_image.jpeg) | ![](https://github.com/Vriddhigupta/Croplyzer/blob/main/prediction.jpeg) |
+| :-------------: | :-------------:  | 
+|     Home Page with Image     |    Maturity Prediction   |   
