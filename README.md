@@ -33,6 +33,10 @@ Tools and technologies that you learnt and used in the project.
 
 For Admin side :-
 1. React Js
+2. MongoDB
+3. Node.JS
+4. Express.JS
+5. TypeScript
 
 For User side :-
 
