@@ -78,7 +78,7 @@ police stations etc so that the officer can get the nearest hospitals or police 
 
 
 ## Screenshots
-## Screenshots
+## Screenshots (App Dev Side)
 | ![](https://github.com/SaminaAttari786/Kavach/blob/master/onboard1.jpeg) | ![](https://github.com/SaminaAttari786/Kavach/blob/master/onboard2.jpeg) | ![](https://github.com/SaminaAttari786/Kavach/blob/master/onboard3.jpeg) | ![](https://github.com/SaminaAttari786/Kavach/blob/master/login.jpeg) |
 | :-------------: | :-------------:  | :-------------:  | :-------------:  |
 |     Onboarding Screen1     |    Onboarding Screen2   |    Onboarding Screen3     |      Login Page    |
@@ -86,3 +86,15 @@ police stations etc so that the officer can get the nearest hospitals or police 
 | ![](https://github.com/SaminaAttari786/Kavach/blob/master/register.jpeg) | ![](https://github.com/SaminaAttari786/Kavach/blob/master/home_page.jpeg) | ![](https://github.com/SaminaAttari786/Kavach/blob/master/emergency.jpeg) | ![](https://github.com/SaminaAttari786/Kavach/blob/master/profile.jpeg) | ![](https://github.com/SaminaAttari786/Kavach/blob/master/notification.jpeg) | 
 | :-------------: | :-------------:  |  :-------------: | :-------------:  | :-------------:  | 
 |     Register Page     |     Home Page   |   Replacement Page     |     Profile Page   |    Alert Notification   |   
+
+## Screenshots (Web Dev Side)
+
+Map Data
+![](https://github.com/SaminaAttari786/Kavach/blob/master/map1.jpg)
+![](https://github.com/SaminaAttari786/Kavach/blob/master/map2.jpg)
+
+Assign Shift
+![](https://github.com/SaminaAttari786/Kavach/blob/master/assign_shift.jpg)
+
+Adding Police Officers
+![](https://github.com/SaminaAttari786/Kavach/blob/master/enter_police_details.jpg)
